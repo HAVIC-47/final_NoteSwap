@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Logo icon/NoteSwap transparent logo  05.png">
+    <title>NoteSwap</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'hudai css/style.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'notes/style.css' %}">
+</head>
+<body>
+    <header class="header">
+        <section class="flex">
+            <a href="{% url 'image_view' %}" class="logo">NoteSwap</a>
+            <nav class="navbar">
+                <a href="{% url 'index' %}">Home</a>
+                <a href="{% url 'index' %}">About</a>
+                <a href="{% url 'notes' %}">Notes</a>
+                <a href="{% url 'upload' %}">Upload</a>
+                <a href="{% url 'user_profile' %}">Profile</a>
+            </nav>
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </section>
+    </header>
+
+    <section class="shop-section">
+            <h1>Notes</h1>
+
+            <div class="container">
+                <form action="{% url 'image_view' %}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{form.as_p}}
+
+                    <button type="submit" >Upload</button>
+                </form>
+
+                {% if obj %}
+                <h3>Succesfully uploaded : {{img_obj.caption}}</h3>
+                <img src="{{ obj.image.url}}" alt="image" class="img-thumbnail" >
+                {% endif %}
+                <hr>
+
+                {% for x in img %}
+                {% if forloop.first %}<div class="row ">{% endif %}
+                    <div class="col-lg-4 col-md-4 col-12" >
+                <div class="text-center mt-2">
+                    <img src="{{x.image.url}}" height="70%" width="70%" class="img-thumbnail" alt="...">
+                    <h2 class="text-center" >{{x.caption}}</h2></div>
+                    </div>
+                    {% if forloop.counter|divisibleby:3 %}
+                </div>
+                <div class=row>{% endif %}
+                {% if forloop.last %}</div>{% endif %}
+                <br>
+                {% endfor %}
+            </div>
+
+
+
+
+
+{#            <div class="shop-grid">#}
+{#                <div class="item">#}
+{#                    <img src="{% static 'photos/page1.PNG' %}" alt="Item 1">#}
+{#                </div>#}
+{#                <div class="item">#}
+{#                    <img src="{% static 'photos/page2.PNG' %}" alt="Item 1">#}
+{#                </div>#}
+{#                <div class="item">#}
+{#                    <img src="{% static 'photos/page3.PNG' %}" alt="Item 1">#}
+{#                </div>#}
+{#                <div class="item">#}
+{#                    <img src="{% static 'photos/page4.PNG' %}" alt="Item 1">#}
+{#                </div>#}
+{#                <div class="item">#}
+{#                    <img src="{% static 'photos/page5.PNG' %}" alt="Item 1">#}
+{#                </div>#}
+{#                <div class="item">#}
+{#                    <img src="{% static 'photos/page6.PNG' %}" alt="Item 1">#}
+{#                </div>#}
+{#                <div class="item">#}
+{#                    <img src="{% static 'photos/page7.PNG' %}" alt="Item 1">#}
+{#                </div>#}
+{#                <div class="item">#}
+{#                    <img src="{% static 'photos/page8.PNG' %}" alt="Item 1">#}
+{#                </div>#}
+{#                <div class="item">#}
+{#                    <img src="{% static 'photos/page9.PNG' %}" alt="Item 1">#}
+{#                </div>#}
+{#                <div class="item">#}
+{#                    <img src="{% static 'photos/page10.PNG' %}" alt="Item 1">#}
+{#                </div>#}
+{#                <div class="item">#}
+{#                    <img src="{% static 'photos/page1.PNG' %}" alt="Item 1">#}
+{#                </div>#}
+{#            </div>#}
+{#        </section>#}
+
+<footer class="footer">
+    <section>
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+        </div>
+        <div class="credit">
+
+            NoteSwap &copy; 2024 | All Rights Reserved.
+        </div>
+    </section>
+</footer>
+</body>
+</html>

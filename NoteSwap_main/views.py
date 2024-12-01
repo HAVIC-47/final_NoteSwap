@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect
+from django.template.context_processors import request
+
 from .forms import PDFUploadForm
 from django.contrib.auth import authenticate , login ,logout
 from django.contrib import messages
@@ -45,6 +47,10 @@ def package(request):
 def coming_soon(request):
     return render(request,template_name='coming_soon.html')
 
+def course_list(request):
+    return render(request,template_name='course_list.html')
+def topic_select(request):
+    return render(request,template_name='topic_select.html')
 
 def upload_pdf(request):
     if request.method == 'POST':
@@ -141,3 +147,19 @@ def upload_note(request, subject_id):
         return redirect('subject_notes', subject_id=subject_id)
 
     return render(request, 'upload_note.html', {'subject': subject})
+
+from .forms import ImageForm
+from .models import Image
+
+# @login_required
+def image_view(request):
+    if request.method == "POST":
+        form = ImageForm(data=request.POST, files=request.FILES)
+        if form.is_valid():
+            form.save()
+            obj = form.instance
+            return render(request, "image_view.html", {"obj": obj})
+    else:
+        form = ImageForm()
+        img = Image.objects.all()
+    return render(request,"image_view.html",{"img": img, "form": form})

@@ -50,5 +50,9 @@ urlpatterns = [
     path('select-subject/', views.select_subject, name='select_subject'),
     path('subject/<int:subject_id>/', views.subject_notes, name='subject_notes'),
     path('upload-note/<int:subject_id>/', views.upload_note, name='upload_note'),
+    path('course_list/', views.course_list, name='course_list'),
+    path('image_view/', views.image_view, name='image_view'),
+    path('topic_select/', views.topic_select, name='topic_select'),
+
 ]
 

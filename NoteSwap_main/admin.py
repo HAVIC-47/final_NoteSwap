@@ -10,6 +10,7 @@ admin.site.register(Note)
 admin.site.register(PDFUpload)
 admin.site.register(Subject)
 admin.site.register(Note_2)
+admin.site.register(Image)
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from .models import User
