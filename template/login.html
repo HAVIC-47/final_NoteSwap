@@ -1,0 +1,53 @@
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'hudai css/login_style.css' %}">
+
+<section class="login-section">
+      <div class="container" id="container">
+        <div class="form-container sign-up">
+
+          <<form method="POST" action="{% url 'register' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Sign Up</button>
+        </form>
+        </div>
+        <div class="form-container sign-in">
+          <form method="POST" action="{% url 'login' %}">
+              {% csrf_token %}
+            <h1>Sign In</h1>
+            <div class="icons">
+              <a href="#" class="icon" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="icon" aria-label="Google"><i class="fab fa-google"></i></a>
+              <a href="#" class="icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+            <span>or use your email account</span>
+              <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+            <a href="#">Forgot your password?</a>
+            <button type="submit">Sign In</button>
+          </form>
+        </div>
+        <div class="toggle-container">
+          <div class="toggle">
+            <div class="toggle-panel toggle-left">
+              <h1>Welcome Back!</h1>
+              <p>If you already have an account</p>
+              <button id="login">Sign In</button>
+            </div>
+            <div class="toggle-panel toggle-right">
+              <h1>Hello, Friend!</h1>
+              <p>If you don't have an account yet</p>
+              <button id="register">Sign Up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="{% static 'hudai js/login.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Logo icon/NoteSwap transparent logo  05.png">
+    <title>NoteSwap</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'hudai css/style.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'hudai css/coming_soon.css' %}">
+</head>
+<body>
+    <header class="header">
+        <section class="flex">
+            <a href="{% url 'index' %}" class="logo">NoteSwap</a>
+            <nav class="navbar">
+                <a href="{% url 'index' %}">Home</a>
+                <a href="{% url 'index' %}">About</a>
+                <a href="{% url 'notes' %}">Notes</a>
+                <a href="{% url 'upload' %}">Upload</a>
+                <a href="{% url 'user_profile' %}">Profile</a>
+            </nav>
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </section>
+    </header>
+
+    <section>
+      <div class="uc__wrapper">
+        <div class="uc__details">
+            <h1 class="title">Coming Soon !!</h1>
+            <h3 class="intro">
+                We are working hard to give you a better experience.
+            </h3>
+            <p class="uc__description">
+                We are working hard on it & the site may go live very soon. We promise, it will be worth the wait!
+            </p>
+            <div class="uc__subscribe">
+                <h3>Get Notified When We Go Live</h3>
+                <div class="uc__form">
+                    <form action="#">
+                        <input type="email" class="email" placeholder="Email Address..">
+                        <input type="submit" class="submit" value="Get Notified">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="uc__art">
+            <img src="{% static 'photos/under_construction.svg' %}" alt="">
+        </div>
+    </div>
+    </section>
+
+
+
+<footer class="footer">
+    <section>
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+        </div>
+        <div class="credit">
+
+            NoteSwap &copy; 2024 | All Rights Reserved.
+        </div>
+    </section>
+</footer>
+</body>
+</html>

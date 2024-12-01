@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Logo icon/NoteSwap transparent logo  05.png">
+    <title>NoteSwap</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'hudai css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'hudai css/user_profile.css' %}">
+</head>
+<body>
+    <header class="header">
+        <section class="flex">
+            <a href="{% url 'index' %}" class="logo">NoteSwap</a>
+            <nav class="navbar">
+                <a href="{% url 'index' %}">Home</a>
+                <a href="{% url 'index' %}">About</a>
+                <a href="{% url 'notes' %}">Notes</a>
+                <a href="{% url 'upload' %}">Upload</a>
+                <a href="{% url 'user_profile' %}">Profile</a>
+            </nav>
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </section>
+    </header>
+
+<div class="wrapper">
+    <div class="left">
+        <img src="{% static 'photos/Nerd-amico.svg' %}"
+        alt="user" width="100">
+        <h4>{{ request.user.username }}</h4>
+         <p>Department :{{ request.user.department }}</p>
+        <p>{{ request.user.university }}</p>
+        <br>
+        <a href="{% url 'edit_profile' %}" class="edit-profile-btn">Edit Profile</a>
+    </div>
+    <div class="right">
+        <div class="info">
+            <h3>Information</h3>
+            <div class="info_data">
+                 <div class="data">
+                    <h4>Email</h4>
+                    <p>{{ request.user.email }}</p>
+                 </div>
+                 <div class="data">
+                   <h4>Access</h4>
+                    <p>{{ request.user.user_role }}</p>
+                 </div>
+
+            </div>
+        </div>
+
+      <div class="projects">
+            <h3>Projects</h3>
+            <div class="projects_data">
+                 <div class="data">
+                    <h4>Occupation</h4>
+                    <p>{{ request.user.occupation }}</p>
+                 </div>
+                 <div class="data">
+                   <h4>Gender</h4>
+                    <p>{{ request.user.gender }}</p>
+              </div>
+            </div>
+        </div>
+
+        <div class="social_media">
+            <ul>
+              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+      </div>
+    </div>
+</div>
+
+
+</body>
+</html>

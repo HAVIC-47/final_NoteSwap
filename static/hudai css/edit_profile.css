@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #009966; /* Matches the green background from your image */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: rgba(12, 71, 48, 0.85); /* Matches the dark card background */
+    color: #fff; /* Ensures text is visible on dark background */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(12, 71, 48, 0.85);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff; /* White heading */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between input fields */
+}
+
+input, select {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    width: 100%;
+    font-size: 16px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: rgba(15, 128, 83, 0.85); /* Matches the button color */
+    box-shadow: 0 0 5px rgba(147, 211, 188, 0.85);
+}
+
+form .btn {
+    background-color: rgba(179, 223, 206, 0.85); /* Matches the red button */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form .btn:hover {
+    background-color: #ffffff;
+}
+
+form .btn-secondary {
+    background-color: #570e24;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+footer {
+    text-align: center;
+    color: #aaa;
+    font-size: 14px;
+    margin-top: 20px;
+}

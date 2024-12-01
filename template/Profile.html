@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'hudai css/style.css' %}">
+
+</head>
+<body>
+<header class="header">
+    <section class="flex">
+        <a href="{% url 'index' %}" class="logo">NoteSwap</a>
+        <nav class="navbar">
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'index' %}">About</a>
+            <a href="{% url 'notes' %}">Notes</a>
+            <a href="{% url 'Price' %}">Premium</a>
+            <a href="{% url 'Profile' %}">Profile</a>
+            {% if user.is_authenticated %}
+            <a href="{% url 'login' %}">Logout</a>
+            {% else %}
+            <a href="{% url 'login' %}">Login</a>
+            <a href="{% url 'register' %}">SignUp</a>
+            {% endif %}
+
+            <a href="{% url 'upload' %}">UPLOAD</a>
+        </nav>
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </section>
+</header>
+
+{% block content %}
+<!--{% load static %}-->
+<!-- ===== ===== Body Main-Background ===== ===== -->
+    <span class="main_bg"></span>
+
+
+    <!-- ===== ===== Main-Container ===== ===== -->
+    <div class="container">
+
+
+        <!-- ===== ===== User Main-Profile ===== ===== -->
+        <section class="userProfile card">
+            <div class="profile">
+                <img src="{% static 'user-profile-icon-free-vector.jpg' %}" alt="User Profile Image"> <!-- Added alt text for accessibility -->
+            </div>
+        </section>
+
+
+        <!-- ===== ===== Work & Skills Section ===== ===== -->
+        <section class="work_skills card">
+
+            <!-- ===== ===== Work Container ===== ===== -->
+            <div class="work">
+                <h1 class="heading">Work</h1> <!-- Corrected capitalization of "Work" -->
+                <div class="primary">
+                    <h1>Student</h1>
+                    <span>Primary</span>
+                </div>
+                <br>
+
+                <div class="secondary">
+                    <h1>Web & Game Developer</h1>
+                    <span>Secondary</span>
+                </div>
+            </div>
+
+            <!-- ===== ===== Skills Container ===== ===== -->
+            <div class="skills">
+                <h1 class="heading">Skills</h1>
+                <ul>
+                    <li style="--i:0">Android</li>
+                    <li style="--i:1">Web-Design</li>
+                    <li style="--i:2">UI/UX</li>
+                    <li style="--i:3">Video Editing</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- ===== ===== User Details Section ===== ===== -->
+        <section class="userDetails card">
+            <div class="userName">
+                <h1 class="name">Mazharul Islam Sourav</h1>
+                <p>Admin</p>
+            </div>
+
+            <div class="rank">
+                <h1 class="heading">Notes Provided</h1> <!-- Corrected capitalization to "Notes Provided" -->
+                <span>250</span>
+            </div>
+
+            <div class="btns">
+                <ul>
+
+                    <li class="sendMsg active">
+                        <i class="ri-check-fill ri"></i>
+                        <a href="#">Contacts</a>
+                    </li>
+
+                    <li class="sendMsg">
+                        <a href="#">Approve</a>
+                    </li>
+
+                    <li class="sendMsg">
+                        <a href="#">Requests</a>
+                    </li>
+
+                    <li class="sendMsg">
+                        <a href="#">Upload Notes</a>
+                    </li>
+
+                    <li class="sendMsg">
+                        <a href="#">Change Password/Email</a> <!-- Fixed "Mail" to "Email" for clarity -->
+                    </li>
+
+
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- ===== ===== Timeline & About Section ===== ===== -->
+        <section class="timeline_about card">
+            <div class="tabs">
+                <ul>
+                    <li class="about active">
+                        <i class="ri-user-3-fill ri"></i>
+                        <span>About</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact_Info">
+                <h1 class="heading">Contact Information</h1>
+                <br>
+                <ul>
+
+                    <li class="address">
+                        <h1 class="label">University:</h1> <!-- Fixed misplaced closing tag for the "address" -->
+                        <span class="info">University Of Asia Pacific</span>
+                    </li>
+
+                    <li class="address">
+                        <h1 class="label">Department:</h1>
+                        <span class="info">CSE</span>
+                    </li>
+
+                    <li class="email">
+                        <h1 class="label">E-mail:</h1>
+                        <span class="info">contact@noteswap.com</span>
+                    </li>
+
+                    <li class="site">
+                        <h1 class="label">Site:</h1>
+                        <span class="info">www.mazharsourav.com</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+{% endblock %}

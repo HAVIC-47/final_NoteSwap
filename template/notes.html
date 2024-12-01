@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Logo icon/NoteSwap transparent logo  05.png">
+    <title>NoteSwap</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'hudai css/style.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'notes/style.css' %}">
+</head>
+<body>
+    <header class="header">
+        <section class="flex">
+            <a href="{% url 'index' %}" class="logo">NoteSwap</a>
+            <nav class="navbar">
+                <a href="{% url 'index' %}">Home</a>
+                <a href="{% url 'index' %}">About</a>
+                <a href="{% url 'notes' %}">Notes</a>
+                <a href="{% url 'upload' %}">Upload</a>
+                <a href="{% url 'user_profile' %}">Profile</a>
+            </nav>
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </section>
+    </header>
+
+    <section class="shop-section">
+            <h1>Notes</h1>
+
+            <div class="shop-grid">
+                <div class="item">
+                    <img src="{% static 'photos/page1.PNG' %}" alt="Item 1">
+                </div>
+                <div class="item">
+                    <img src="{% static 'photos/page2.PNG' %}" alt="Item 1">
+                </div>
+                <div class="item">
+                    <img src="{% static 'photos/page3.PNG' %}" alt="Item 1">
+                </div>
+                <div class="item">
+                    <img src="{% static 'photos/page4.PNG' %}" alt="Item 1">
+                </div>
+                <div class="item">
+                    <img src="{% static 'photos/page5.PNG' %}" alt="Item 1">
+                </div>
+                <div class="item">
+                    <img src="{% static 'photos/page6.PNG' %}" alt="Item 1">
+                </div>
+                <div class="item">
+                    <img src="{% static 'photos/page7.PNG' %}" alt="Item 1">
+                </div>
+                <div class="item">
+                    <img src="{% static 'photos/page8.PNG' %}" alt="Item 1">
+                </div>
+                <div class="item">
+                    <img src="{% static 'photos/page9.PNG' %}" alt="Item 1">
+                </div>
+                <div class="item">
+                    <img src="{% static 'photos/page10.PNG' %}" alt="Item 1">
+                </div>
+                <div class="item">
+                    <img src="{% static 'photos/page1.PNG' %}" alt="Item 1">
+                </div>
+            </div>
+        </section>
+
+<footer class="footer">
+    <section>
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+        </div>
+        <div class="credit">
+
+            NoteSwap &copy; 2024 | All Rights Reserved.
+        </div>
+    </section>
+</footer>
+</body>
+</html>

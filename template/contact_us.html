@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Logo icon/NoteSwap transparent logo  05.png">
+    <title>NoteSwap</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'hudai css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'hudai css/contact_us.css' %}">
+</head>
+<body>
+    <header class="header">
+        <section class="flex">
+            <a href="{% url 'index' %}" class="logo">NoteSwap</a>
+            <nav class="navbar">
+                <a href="{% url 'index' %}">Home</a>
+                <a href="{% url 'index' %}">About</a>
+                <a href="{% url 'notes' %}">Notes</a>
+                <a href="{% url 'upload' %}">Upload</a>
+                <a href="{% url 'user_profile' %}">Profile</a>
+            </nav>
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </section>
+    </header>
+<section class="contact-form">
+    <h4 class="sectionHeader">contact us</h4>
+    <h1 class="heading">Get In Touch!</h1>
+<!--    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor eos-->
+<!--        inventore omnis aliquid rerum alias molestias.</p>-->
+
+    <div class="contactForm">
+        <form action="#">
+            <h1 class="sub-heading">Need Support!</h1>
+            <p class="para para2">Contact us for a quote, or help to join the theme.</p>
+            <input type="text" class="input" placeholder="Your Name">
+            <input type="email" class="input" placeholder="Your Email">
+            <input type="text" class="input" placeholder="Your Subject">
+            <textarea class="input" cols="30" rows="5" placeholder="Your message..."></textarea>
+            <input type="submit" class="input submit" value="Send Message">
+        </form>
+        <div class="map-container">
+            <div class="mapBg"></div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.8471710303345!2d90.36661097597588!3d23.750030984554816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7b9ff55a6af%3A0xe7f7c57e9d64a3bd!2sDhanmondi%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1698848184976!5m2!1sen!2sbd"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="contactMethod">
+        <div class="method">
+            <i class="fa-solid fa-location-dot contactIcon"></i>
+            <article class="text">
+                <h1 class="sub-heading">Location</h1>
+                <p class="para">Currently we only online based</p>
+            </article>
+        </div>
+
+        <div class="method">
+            <i class="fa-solid fa-envelope contactIcon"></i>
+            <article class="text">
+                <h1 class="sub-heading">Email</h1>
+                <p class="para">noteswap@contact.com</p>
+            </article>
+        </div>
+
+        <div class="method">
+            <i class="fa-solid fa-phone contactIcon"></i>
+            <article class="text">
+                <h1 class="sub-heading">Phone</h1>
+                <p class="para">22101132-33</p>
+            </article>
+        </div>
+    </div>
+   </section>
+
+<footer class="footer">
+    <section>
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+        </div>
+        <div class="credit">
+
+            NoteSwap &copy; 2024 | All Rights Reserved.
+        </div>
+    </section>
+</footer>
+</body>
+</html>

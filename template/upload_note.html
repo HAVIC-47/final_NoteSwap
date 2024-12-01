@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Note</title>
+</head>
+<body>
+    <header>
+        <h1>Upload Note for {{ subject.name }}</h1>
+    </header>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="note_image">Select Note Image:</label>
+        <input type="file" name="note_image" required>
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>

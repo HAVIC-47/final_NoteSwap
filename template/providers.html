@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Logo icon/NoteSwap transparent logo  05.png">
+    <title>NoteSwap</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'hudai css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'hudai css/providers.css' %}">
+</head>
+<body>
+    <header class="header">
+        <section class="flex">
+            <a href="{% url 'index' %}" class="logo">NoteSwap</a>
+            <nav class="navbar">
+                <a href="{% url 'index' %}">Home</a>
+                <a href="{% url 'index' %}">About</a>
+                <a href="{% url 'notes' %}">Notes</a>
+                <a href="{% url 'upload' %}">Upload</a>
+                <a href="{% url 'user_profile' %}">Profile</a>
+            </nav>
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </section>
+    </header>
+
+    <div class="card-container">
+        <div class="card">
+            <img src="{% static 'photos/Nerd-amico.svg' %}">
+            <div class="card-content">
+                <h3>Kichu Ekta</h3>
+                <p>HUdai kichu ekta likhlei hoy</p>
+                <a href="" class="btn">Read More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'photos/Nerd-amico.svg' %}">
+            <div class="card-content">
+                <h3>Kichu Ekta</h3>
+                <p>HUdai kichu ekta likhlei hoy</p>
+                <a href="" class="btn">Read More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'photos/Nerd-amico.svg' %}">
+            <div class="card-content">
+                <h3>Kichu Ekta</h3>
+                <p>HUdai kichu ekta likhlei hoy</p>
+                <a href="" class="btn">Read More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'photos/Nerd-amico.svg' %}">
+            <div class="card-content">
+                <h3>Kichu Ekta</h3>
+                <p>HUdai kichu ekta likhlei hoy</p>
+                <a href="" class="btn">Read More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'photos/Nerd-amico.svg' %}">
+            <div class="card-content">
+                <h3>Kichu Ekta</h3>
+                <p>HUdai kichu ekta likhlei hoy</p>
+                <a href="" class="btn">Read More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'photos/Nerd-amico.svg' %}">
+            <div class="card-content">
+                <h3>Kichu Ekta</h3>
+                <p>HUdai kichu ekta likhlei hoy</p>
+                <a href="" class="btn">Read More</a>
+            </div>
+        </div>
+    </div>
+<footer class="footer">
+    <section>
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+        </div>
+        <div class="credit">
+
+            NoteSwap &copy; 2024 | All Rights Reserved.
+        </div>
+    </section>
+</footer>
+</body>
+</html>

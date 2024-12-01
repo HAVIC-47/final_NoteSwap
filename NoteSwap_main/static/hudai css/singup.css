@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.left-panel, .right-panel {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-panel {
+    background-color: rgba(68, 205, 147, 0.85);
+    color: white;
+    flex: 1;
+    text-align: center;
+}
+
+.left-panel h2 {
+    margin-bottom: 20px;
+}
+
+.left-panel button {
+    background-color: white;
+    color: rgba(68, 205, 147, 0.85);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.right-panel {
+    background-color: white;
+    flex: 1;
+}
+
+.right-panel h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.right-panel form {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-panel form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.right-panel form button {
+    background-color: rgba(68, 205, 147, 0.85);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}

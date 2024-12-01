@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NoteSwap</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'photos/NoteSwap transparent logo  05.png' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'hudai css/style.css' %}">
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+<header class="header">
+    <section class="flex">
+        <a href="{% url 'index' %}" class="logo">NoteSwap</a>
+        <nav class="navbar">
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'index' %}">About</a>
+            <a href="{% url 'select_subject' %}">Notes</a>
+            <a href="{% url 'package' %}">Premium</a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'logout' %}">Logout</a>
+                <a href="{% url 'user_profile' %}">Profile</a>
+                {% if user.user_role == 'note_provider' %}
+                    <a href="{% url 'upload' %}">Upload</a>
+                {% endif %}
+            {% else %}
+                <a href="{% url 'login' %}">Login</a>
+                <a href="{% url 'register' %}">Sign Up</a>
+            {% endif %}
+        </nav>
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </section>
+</header>
+>
+
+
+{% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+            <div class="alert {% if message.tags %}alert-{{ message.tags }}{% else %}alert-info{% endif %}" role="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+{% block content%}
+
+{% endblock %}
+<footer class="footer">
+    <section>
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+        </div>
+        <div class="credit">
+
+            NoteSwap &copy; 2024 | All Rights Reserved.
+        </div>
+    </section>
+</footer>
+
+<script src="{% static 'hudai js/script.js' %}"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>-->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</body>
+</html>

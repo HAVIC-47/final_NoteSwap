@@ -1,0 +1,287 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+    <section class="home" id="home">
+        <div class="row">
+            <div class="content">
+                <h3>Welcome <span>{{ request.user.username }}</span></h3>
+                <a href="{% url 'package' %}"class="btn">Premium</a>
+                <a href="{% url 'coming_soon' %}" class="btn">Requests</a>
+            </div>
+            <div class="image">
+                <img src="{% static 'photos/Exams-bro.svg' %}" alt="Logo">
+            </div>
+        </div>
+    </section>
+
+    <section class="count">
+        <div class="box-container">
+            <div class="box">
+                <i class="fas fa-graduation-cap">
+                    <div class="content">
+                        <h3>1000+</h3>
+                        <p>Notes</p>
+                    </div>
+                </i>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-user-graduate">
+                    <div class="content">
+                        <h3>500+</h3>
+                        <p>Students</p>
+                    </div>
+                </i>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-chalkboard-user">
+                    <div class="content">
+                        <h3>50+</h3>
+                        <p>Note Provider</p>
+                    </div>
+                </i>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-face-smile">
+                    <div class="content">
+                        <h3>100%</h3>
+                        <p>Satisfaction</p>
+                    </div>
+                </i>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="row">
+            <div class="image">
+                <img src="{% static 'photos/Shrug-bro.svg' %}" alt="Logo">
+            </div>
+            <div class="content">
+                <h3>Why Read Our Notes?</h3>
+                <p>Our notes are crafted by experienced professionals, ensuring top-notch quality and reliability. Easily accessible and covering a wide range of topics, they cater to all your study needs. Join thousands of satisfied students who trust our comprehensive and user-friendly notes. Elevate your learning experience with NoteSwap today!</p>
+                <a href="{% url 'contact_us' %}" class="btn">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="notes" id="notes">
+        <h1 class="heading">Our <span>Notes</span></h1>
+        <div class="swiper note-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide">
+                    <a href="https://drive.google.com/drive/folders/1be0G4AsNf18lRJB2lNw-pEKMTFERmPWE" target="_blank">
+                    <img src="{% static 'photos/Operating system-bro.svg' %}" alt="Logo">
+                    <h3>Automata</h3>
+                    <p>Here you can search note for different Semesters.</p>
+                    </a>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <a href="{% url 'notes' %}">
+                    <img src="{% static 'photos/Teacher-bro.svg' %}" alt="Logo">
+                    <h3>Physics</h3>
+                    <p>Here you can search note for different Semesters.</p>
+                    </a>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <a href="{% url 'select_subject' %}">
+                    <img src="{% static 'photos/Science-cuate.svg' %}" alt="Logo">
+                    <h3>Chemistry</h3>
+                    <p>Here you can search note for different Semesters.</p>
+                    </a>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <a href="{% url 'notes' %}">
+                    <img src="{% static 'photos/Mathematics-bro.svg' %}" alt="Logo">
+                    <h3>Data Communication</h3>
+                    <p>Here you can search note for different Semesters.</p>
+                    </a>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <a href="{% url 'notes' %}">
+                    <img src="{% static 'photos/Operating system-bro.svg' %}" alt="Logo">
+                    <h3>Algorithm</h3>
+                    <p>Here you can search note for different Semesters.</p>
+                    </a>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <a href="{% url 'notes' %}">
+                    <img src="{% static 'photos/Create-bro.svg' %}" alt="Logo">
+                    <h3>System Design & Analysis</h3>
+                    <p>Here you can search note for different Semesters.</p>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+<!--    <section class="noteprovider" id="noteprovider">-->
+<!--        <h1 class="heading">Note <span>Provider</span></h1>-->
+<!--        <div class="swiper noteprovider-slider">-->
+<!--            <div class="swiper-wrapper">-->
+<!--                <div class="swiper-slide slide">-->
+<!--                    <a href="user_profile.html"><img src="{% static 'photos/10223848.jpg' %}" alt="Logo"></a>-->
+<!--                    <div class="share">-->
+<!--                        <a href="#" class="fab fa-facebook-f"></a>-->
+<!--                        <a href="#" class="fab fa-instagram"></a>-->
+<!--                        <a href="#" class="fab fa-twitter"></a>-->
+<!--                        <a href="#" class="fab fa-linkedin"></a>-->
+<!--                    </div>-->
+<!--                    <h3>Mazharul Islam Sourav</h3>-->
+<!--                    <p>University of Asia Pacific</p>-->
+<!--                </div>-->
+
+<!--                <div class="swiper-slide slide">-->
+<!--                    <a href="user_profile.html"><img src="{% static 'photos/Faisal.svg' %}" alt="Logo"></a>-->
+<!--                    <div class="share">-->
+<!--                        <a href="#" class="fab fa-facebook-f"></a>-->
+<!--                        <a href="#" class="fab fa-instagram"></a>-->
+<!--                        <a href="#" class="fab fa-twitter"></a>-->
+<!--                        <a href="#" class="fab fa-linkedin"></a>-->
+<!--                    </div>-->
+<!--                    <h3>Faisal Hossain</h3>-->
+<!--                    <p>University of Asia Pacific</p>-->
+<!--                </div>-->
+
+<!--               <div class="swiper-slide slide">-->
+<!--                    <a href="user_profile.html"><img src="{% static 'photos/Sharif.svg' %}" alt="Logo"></a>-->
+<!--                    <div class="share">-->
+<!--                        <a href="#" class="fab fa-facebook-f"></a>-->
+<!--                        <a href="#" class="fab fa-instagram"></a>-->
+<!--                        <a href="#" class="fab fa-twitter"></a>-->
+<!--                        <a href="#" class="fab fa-linkedin"></a>-->
+<!--                    </div>-->
+<!--                    <h3>Sharif Yousuf</h3>-->
+<!--                    <p>University of Asia Pacific</p>-->
+<!--                </div>-->
+
+<!--                <div class="swiper-slide slide">-->
+<!--                    <a href="user_profile.html"><img src="{% static 'photos/Priom.svg' %}" alt="Logo"></a>-->
+<!--                    <div class="share">-->
+<!--                        <a href="#" class="fab fa-facebook-f"></a>-->
+<!--                        <a href="#" class="fab fa-instagram"></a>-->
+<!--                        <a href="#" class="fab fa-twitter"></a>-->
+<!--                        <a href="#" class="fab fa-linkedin"></a>-->
+<!--                    </div>-->
+<!--                    <h3>Noor Mohammad Priom</h3>-->
+<!--                    <p>University of Asia Pacific</p>-->
+<!--                </div>-->
+
+<!--               <div class="swiper-slide slide">-->
+<!--                   <a href="user_profile.html"><img src="{% static 'photos/Dictionary-pana.svg' %}" alt="Logo"></a>-->
+<!--                    <div class="share">-->
+<!--                        <a href="#" class="fab fa-facebook-f"></a>-->
+<!--                        <a href="#" class="fab fa-instagram"></a>-->
+<!--                        <a href="#" class="fab fa-twitter"></a>-->
+<!--                        <a href="#" class="fab fa-linkedin"></a>-->
+<!--                    </div>-->
+<!--                    <h3>Wasiu Jahan</h3>-->
+<!--                    <p>University of Asia Pacific</p>-->
+<!--                </div>-->
+
+<!--                <div class="swiper-slide slide">-->
+<!--                    <a href="user_profile.html"><img src="{% static 'photos/Muslim graduation-amico.svg' %}" alt="Logo"></a>-->
+<!--                    <div class="share">-->
+<!--                        <a href="#" class="fab fa-facebook-f"></a>-->
+<!--                        <a href="#" class="fab fa-instagram"></a>-->
+<!--                        <a href="#" class="fab fa-twitter"></a>-->
+<!--                        <a href="#" class="fab fa-linkedin"></a>-->
+<!--                    </div>-->
+<!--                    <h3>Nusaiba Binte Amin</h3>-->
+<!--                    <p>University of Asia Pacific</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="swiper-pagination"></div>-->
+<!--        </div>-->
+<!--    </section>-->
+
+<!-- Start -->
+<section class="about" id="about1">
+        <div class="row">
+            <div class="content">
+                <h3>Meet Our <span>Note Provider</span></h3>
+                <p>Our notes are crafted by experienced professionals, ensuring top-notch quality and reliability. Easily accessible and covering a wide range of topics, they cater to all your study needs. Join thousands of satisfied students who trust our comprehensive and user-friendly notes. Elevate your learning experience with NoteSwap today!</p>
+                <a href="{% url 'providers' %}" class="btn">Meet Us</a>
+            </div>
+            <div class="image">
+                <img src="{% static 'photos/Nerd-amico.svg' %}" alt="Logo">
+            </div>
+        </div>
+    </section>
+<!-- ENd -->
+
+
+
+
+    <section class="reviews" id="reviews">
+        <h1 class="heading">Student's <span>Reviews</span></h1>
+        <div class="swiper reviews-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide">
+                    <p>NoteSwap and its note providers are very helpful. Helped me a lot to understand a topic. And the community is great.</p>
+                    <div class="user">
+                        <img src="{% static 'photos/Muslim graduation-amico.svg' %}" alt="Logo">
+                        <div class="user-info">
+                            <h3>Nusaiba Binte Amin</h3>
+                            <h5>University of Asia Pacific</h5>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <p>Kar slide ipsum dolor sit amet consectetur adipisicing elit. Amet eius adipisci voluptate totam, rem animi?</p>
+                    <div class="user">
+                        <img src="{% static 'photos/Muslim graduation-amico.svg' %}" alt="Logo">
+                        <div class="user-info">
+                            <h3>Mariyam Kaifee</h3>
+                            <h5>BRAC University</h5>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <p>The note providers are top-notch and they offer resources that are up-to-date with the latest curriculum!</p>
+                    <div class="user">
+                        <img src="{% static 'photos/Muslim graduation-amico.svg' %}" alt="Logo">
+                        <div class="user-info">
+                            <h3>Shamima Nasrin</h3>
+                            <h5>Brac University</h5>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+<!--<script src="{% static 'hudai js/script.js' %}"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>-->
+{% endblock %}

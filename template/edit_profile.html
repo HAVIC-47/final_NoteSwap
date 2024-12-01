@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'hudai css/edit_profile.css' %}">
+<div class="container">
+        <h1>Edit Profile</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn">Save Changes</button>
+            <a href="{% url 'user_profile' %}" class="btn-secondary">Cancel</a>
+        </form>
+    </div>
+
+
+{% endblock %}
