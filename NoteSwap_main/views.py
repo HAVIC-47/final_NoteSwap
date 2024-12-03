@@ -49,8 +49,12 @@ def coming_soon(request):
 
 def course_list(request):
     return render(request,template_name='course_list.html')
+
 def topic_select(request):
     return render(request,template_name='topic_select.html')
+
+def provider_profile(request):
+    return render(request,template_name='provider_profile.html')
 
 def upload_pdf(request):
     if request.method == 'POST':
@@ -163,3 +167,10 @@ def image_view(request):
         form = ImageForm()
         img = Image.objects.all()
     return render(request,"image_view.html",{"img": img, "form": form})
+
+# def product_details(request,id):
+#     product = Product.objects.get(pk = id)
+#     context = {
+#         'product':product,
+#     }
+#     return render(request,template_name = 'product_details.html',context = context)

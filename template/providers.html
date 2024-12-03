@@ -18,8 +18,12 @@
             <nav class="navbar">
                 <a href="{% url 'index' %}">Home</a>
                 <a href="{% url 'index' %}">About</a>
-                <a href="{% url 'notes' %}">Notes</a>
+                <a href="{% url 'course_list' %}">Notes</a>
+            {% if user.is_authenticated %}
+                {% if user.user_role == 'note_provider' %}
                 <a href="{% url 'upload' %}">Upload</a>
+                {% endif %}
+            {% endif %}
                 <a href="{% url 'user_profile' %}">Profile</a>
             </nav>
             <div id="menu-btn" class="fas fa-bars"></div>
@@ -28,55 +32,55 @@
 
     <div class="card-container">
         <div class="card">
-            <img src="{% static 'photos/Nerd-amico.svg' %}">
+            <img src="{% static 'photos/profile_picture.jpg' %}">
             <div class="card-content">
-                <h3>Kichu Ekta</h3>
-                <p>HUdai kichu ekta likhlei hoy</p>
+                <h3>Mazhar Sourav</h3>
+                <p>University Of Asia Pacific</p>
+                <a href="{% url 'provider_profile' %}" class="btn">Read More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'photos/profile_picture.jpg' %}">
+            <div class="card-content">
+                <h3>Fasial Hossain</h3>
+                <p>University Of Asia Pacific</p>
                 <a href="" class="btn">Read More</a>
             </div>
         </div>
 
         <div class="card">
-            <img src="{% static 'photos/Nerd-amico.svg' %}">
+            <img src="{% static 'photos/profile_picture.jpg' %}">
             <div class="card-content">
-                <h3>Kichu Ekta</h3>
-                <p>HUdai kichu ekta likhlei hoy</p>
+                <h3>Sharif Yousuf</h3>
+                <p>University Of Asia Pacific</p>
                 <a href="" class="btn">Read More</a>
             </div>
         </div>
 
         <div class="card">
-            <img src="{% static 'photos/Nerd-amico.svg' %}">
+            <img src="{% static 'photos/profile_picture.jpg' %}">
             <div class="card-content">
-                <h3>Kichu Ekta</h3>
-                <p>HUdai kichu ekta likhlei hoy</p>
+                <h3>Noor Priom</h3>
+                <p>University Of Asia Pacific</p>
                 <a href="" class="btn">Read More</a>
             </div>
         </div>
 
         <div class="card">
-            <img src="{% static 'photos/Nerd-amico.svg' %}">
+            <img src="{% static 'photos/profile_picture.jpg' %}">
             <div class="card-content">
-                <h3>Kichu Ekta</h3>
-                <p>HUdai kichu ekta likhlei hoy</p>
+                <h3>Musfiq</h3>
+                <p>University Of Asia Pacific</p>
                 <a href="" class="btn">Read More</a>
             </div>
         </div>
 
         <div class="card">
-            <img src="{% static 'photos/Nerd-amico.svg' %}">
+            <img src="{% static 'photos/profile_picture.jpg' %}">
             <div class="card-content">
-                <h3>Kichu Ekta</h3>
-                <p>HUdai kichu ekta likhlei hoy</p>
-                <a href="" class="btn">Read More</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="{% static 'photos/Nerd-amico.svg' %}">
-            <div class="card-content">
-                <h3>Kichu Ekta</h3>
-                <p>HUdai kichu ekta likhlei hoy</p>
+                <h3>Imtiaz Emon</h3>
+                <p>Brac University</p>
                 <a href="" class="btn">Read More</a>
             </div>
         </div>

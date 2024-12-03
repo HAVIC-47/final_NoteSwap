@@ -18,8 +18,12 @@
             <nav class="navbar">
                 <a href="{% url 'index' %}">Home</a>
                 <a href="{% url 'index' %}">About</a>
-                <a href="{% url 'notes' %}">Notes</a>
+                <a href="{% url 'course_list' %}">Notes</a>
+            {% if user.is_authenticated %}
+                {% if user.user_role == 'note_provider' %}
                 <a href="{% url 'upload' %}">Upload</a>
+                {% endif %}
+            {% endif %}
                 <a href="{% url 'user_profile' %}">Profile</a>
             </nav>
             <div id="menu-btn" class="fas fa-bars"></div>
@@ -28,7 +32,7 @@
 
     <div class="card-container">
         <div class="card">
-            <img src="{% static 'photos/Nerd-amico.svg' %}">
+            <img src="{% static 'photos/Automata.png' %}">
             <div class="card-content">
                 <h3>NFA TO DFA</h3>
                 <p>Theory</p>
@@ -37,27 +41,27 @@
         </div>
 
         <div class="card">
-            <img src="{% static 'photos/Nerd-amico.svg' %}">
+            <img src="{% static 'photos/Automata.png' %}">
             <div class="card-content">
-                <h3>Data Communication</h3>
-                <p>Lab</p>
-                <a href="{% url 'image_view' %}" class="btn">Read More</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="{% static 'photos/Nerd-amico.svg' %}">
-            <div class="card-content">
-                <h3>Automata</h3>
+                <h3>Epsilon NFA</h3>
                 <p>Theory</p>
                 <a href="{% url 'image_view' %}" class="btn">Read More</a>
             </div>
         </div>
 
         <div class="card">
-            <img src="{% static 'photos/Nerd-amico.svg' %}">
+            <img src="{% static 'photos/Automata.png' %}">
             <div class="card-content">
-                <h3>Microprocessor</h3>
+                <h3>Turing</h3>
+                <p>Theory</p>
+                <a href="{% url 'image_view' %}" class="btn">Read More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'photos/Automata.png' %}">
+            <div class="card-content">
+                <h3>Minimization</h3>
                 <p>Theory</p>
                 <a href="{% url 'image_view' %}" class="btn">Read More</a>
             </div>

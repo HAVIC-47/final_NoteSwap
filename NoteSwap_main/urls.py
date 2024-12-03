@@ -53,6 +53,8 @@ urlpatterns = [
     path('course_list/', views.course_list, name='course_list'),
     path('image_view/', views.image_view, name='image_view'),
     path('topic_select/', views.topic_select, name='topic_select'),
+    path('provider_profile/', views.provider_profile, name='provider_profile'),
+    # path('/<str:id>', s_views.product_details, name='product_details'),
 
 ]
 

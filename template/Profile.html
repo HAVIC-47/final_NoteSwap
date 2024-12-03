@@ -14,7 +14,12 @@
         <nav class="navbar">
             <a href="{% url 'index' %}">Home</a>
             <a href="{% url 'index' %}">About</a>
-            <a href="{% url 'notes' %}">Notes</a>
+           <a href="{% url 'course_list' %}">Notes</a>
+            {% if user.is_authenticated %}
+                {% if user.user_role == 'note_provider' %}
+                <a href="{% url 'upload' %}">Upload</a>
+                {% endif %}
+            {% endif %}
             <a href="{% url 'Price' %}">Premium</a>
             <a href="{% url 'Profile' %}">Profile</a>
             {% if user.is_authenticated %}

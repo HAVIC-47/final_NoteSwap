@@ -1,7 +1,22 @@
-{% extends 'base.html' %}
-{% block content %}
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'hudai css/edit_profile.css' %}">
+
+<!--{% block content %}-->
+<!--{% load static %}-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Logo icon/NoteSwap transparent logo  05.png">
+    <title>NoteSwap</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'hudai css/style.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'hudai css/edit_profile.css' %}">
+</head>
+<body>
+
 <div class="container">
         <h1>Edit Profile</h1>
         <form method="post">
@@ -11,6 +26,8 @@
             <a href="{% url 'user_profile' %}" class="btn-secondary">Cancel</a>
         </form>
     </div>
+</body>
+</html>
 
 
-{% endblock %}
+<!--{% endblock %}-->

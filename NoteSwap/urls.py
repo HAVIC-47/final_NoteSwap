@@ -44,8 +44,10 @@ urlpatterns = [
     path('logout/', views.logout_user, name='logout'),
     path('upload_pdf/', views.upload_pdf, name='upload_pdf'),  # PDF Upload page
     path('register/', views.register_user, name='register'),
-     path("image",include("NoteSwap_main.urls"))
-    # Do not redundantly include 'NoteSwap_main.urls' as you've already defined views here
+    path("image",include("NoteSwap_main.urls")),
+    # path('/<str:id>', s_views.product_details, name='product_details'),
+
+                  # Do not redundantly include 'NoteSwap_main.urls' as you've already defined views here
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:

@@ -19,11 +19,7 @@
                 <a href="{% url 'index' %}">Home</a>
                 <a href="{% url 'index' %}">About</a>
                 <a href="{% url 'course_list' %}">Notes</a>
-            {% if user.is_authenticated %}
-                {% if user.user_role == 'note_provider' %}
                 <a href="{% url 'upload' %}">Upload</a>
-                {% endif %}
-            {% endif %}
                 <a href="{% url 'user_profile' %}">Profile</a>
             </nav>
             <div id="menu-btn" class="fas fa-bars"></div>
@@ -34,9 +30,9 @@
     <div class="left">
         <img src="{% static 'photos/Nerd-amico.svg' %}"
         alt="user" width="100">
-        <h4>{{ request.user.username }}</h4>
-         <p>Department :{{ request.user.department }}</p>
-        <p>{{ request.user.university }}</p>
+        <h4>Mazharul Islam Sourav</h4>
+         <p>CSE</p>
+        <p>University Of Asia Pacific</p>
         <br>
         <a href="{% url 'edit_profile' %}" class="edit-profile-btn">Edit Profile</a>
     </div>
@@ -46,11 +42,11 @@
             <div class="info_data">
                  <div class="data">
                     <h4>Email</h4>
-                    <p>{{ request.user.email }}</p>
+                    <p>noteswap@contact.com</p>
                  </div>
                  <div class="data">
                    <h4>Access</h4>
-                    <p>{{ request.user.user_role }}</p>
+                    <p>Provider</p>
                  </div>
 
             </div>
